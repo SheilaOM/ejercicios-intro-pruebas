@@ -10,7 +10,7 @@ public class LastZero
    */
    public static int lastZero (int[] x)
    {
-      for (int i = 0; i < x.length; i++)
+      for (int i = x.length-1; i >= 0; i--)
       {
          if (x[i] == 0)
          {
@@ -19,7 +19,7 @@ public class LastZero
       }
       return -1;
    }
-   
+
    public static void main (String []argv)
    {  // Driver method for lastZero
       // Read an array from standard input, call lastZero()
@@ -29,7 +29,7 @@ public class LastZero
          System.out.println ("Usage: java LastZero v1 [v2] [v3] ... ");
          return;
       }
-   
+
       for (int i = 0; i< argv.length; i++)
       {
          try
@@ -42,7 +42,7 @@ public class LastZero
             inArr [i] = 1;
          }
       }
-   
+
       System.out.println ("The last index of zero is: " + lastZero (inArr));
    }
 }
