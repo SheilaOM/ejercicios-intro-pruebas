@@ -5,10 +5,17 @@ import java.util.*;
 public class FindLastTest
 {
    // this test fails!
-   @Test public void lastOccurrenceInFirstElement() 
+   @Test public void lastOccurrenceInFirstElement()
    {
       int arr[] = {2, 3, 5};
       int y = 2;
       assertEquals("Last occurence in first element", 0, FindLast.findLast(arr, y));
+   }
+
+   @Test public void lastOccurrenceInOtherElement()
+   {
+      int arr[] = {1, 2, 3, 4};
+      int y = 3;
+      assertEquals("Last occurence in other element", 2, FindLast.findLast(arr, y));
    }
 }
