@@ -12,19 +12,19 @@ public class OddOrPos
       // else return the number of elements in x that
       //      are either odd or positive (or both)
       int count = 0;
-   
+
       for (int i = 0; i < x.length; i++)
       {
-         if (x[i]%2 == 1 || x[i] > 0)
+         if (Math.abs(x[i]%2) == 1 || x[i] > 0)
          {
             count++;
          }
       }
       return count;
    }
-      // test:  x=[-3, -2, 0, 1, 4]           
+      // test:  x=[-3, -2, 0, 1, 4]
       //        Expected = 3
-   
+
    public static void main (String []argv)
    {  // Driver method for oddOrPos
       // Read an array from standard input, call oddOrPos()
@@ -34,7 +34,7 @@ public class OddOrPos
          System.out.println ("Usage: java OddOrPos v1 [v2] [v3] ... ");
          return;
       }
-   
+
       for (int i = 0; i< argv.length; i++)
       {
          try
@@ -47,8 +47,7 @@ public class OddOrPos
             inArr [i] = 1;
          }
       }
-   
+
       System.out.println ("Number of elements that are either odd or positive is: " + oddOrPos (inArr));
    }
 }
-
